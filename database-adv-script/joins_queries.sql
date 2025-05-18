@@ -4,9 +4,10 @@ FROM bookings b
 INNER JOIN users u ON b.user_id = u.id;
 
 -- LEFT JOIN: Retrieve all properties and their reviews (including properties without reviews)
-SELECT p.id AS property_id, p.name AS property_name, r.id AS review_id, r.rating
-FROM properties p
-LEFT JOIN reviews r ON p.id = r.property_id;
+SELECT p.property_id, p.title, p.price, r.review_id, r.rating, r.comment
+FROM Properties p
+LEFT JOIN Reviews r ON p.property_id = r.property_id
+ORDER BY p.property_id;
 
 -- FULL OUTER JOIN simulation using UNION (for MySQL)
 SELECT u.id AS user_id, u.name, b.id AS booking_id
