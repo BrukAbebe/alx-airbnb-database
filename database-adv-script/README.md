@@ -14,3 +14,10 @@ This directory contains SQL queries demonstrating the use of INNER JOIN, LEFT JO
 - **Queries**:
   - Non-correlated subquery: Finds properties with average rating > 4.0.
   - Correlated subquery: Finds users with more than 3 bookings.
+
+# Airbnb Database Aggregations and Window Functions
+
+- **File**: `aggregations_and_window_functions.sql`
+- **Queries**:
+  - Aggregation: Counts total bookings per user.
+  - Window function: Ranks properties by number of bookings.
